@@ -29,6 +29,17 @@ h1{
     padding-right: 200px;
 }
 
+h2{
+    font-size: 10em;
+    font-weight:normal;
+}
+
+.seo{
+    margin-left: 9%;
+    margin-right: 9%;
+}
+
+
 .childContainer2{
     display: flex;
     justify-content: center;
@@ -40,11 +51,254 @@ h1{
     padding: 160px;
 }
 
-.slidesContainer3{
+/*.slidesContainer3{
     display: flex;
-    margin: 0;
+    flex-wrap: wrap;
+    position: relative;
+    margin: auto;
+}*/
+
+.mySlides img{
+    width: 100%;
 }
 
-.slidesContainer3 img{
-    width: 130%;
+/*.prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    margin-top: -22px;
+    padding: 16px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+  }
+
+  .next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+  }
+  
+  /* On hover, add a black background color with a little bit see-through 
+  .prev:hover, .next:hover {
+    background-color: rgba(0,0,0,0.8);
+  }*/
+
+.dot {
+  height: 30px;
+  width: 30px;
+  margin-right:1%;
+  margin-top: 2%;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
 }
+
+.active {
+    background-color: #717171;
+}
+
+
+
+ul {
+    list-style: none;
+}
+
+a{
+	text-decoration:none;
+}
+.box{
+	width:100%;
+	overflow: hidden;
+	margin: 25px;
+    display:flex
+}
+.slide-img{
+	height: 450px;
+	position:relative;
+}
+.slide-img img{
+	width:100%;
+	height: 100%;
+	object-fit: cover;
+	box-sizing: border-box;
+}
+.detail-box{
+	width: 100%;
+    display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 10px 20px;
+	box-sizing: border-box;
+	font-family: calibri;
+}
+.type{
+	display: flex;
+	flex-direction: column;
+}
+.type a{
+	color:#222222;
+	margin: 5px 0px;
+	font-weight: 700;
+	letter-spacing: 0.5px;
+	padding-right: 8px;
+}
+.type span{
+	color:rgba(26,26,26,0.5);
+}
+.price{
+	color: #333333;
+	font-weight: 600;
+	font-size: 1.1rem;
+	font-family: poppins;
+	letter-spacing: 0.5px;
+}
+.overlay{
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%,-50%);
+	width:100%;
+	height: 100%;
+	background-color: rgba(92,95,236,0.6);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.buy-btn{
+	width:160px;
+	height: 40px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-color: #FFFFFF;
+	color:#252525;
+	font-weight: 700;
+	letter-spacing: 1px;
+	font-family: calibri;
+	border-radius: 20px;
+	box-shadow: 2px 2px 30px rgba(0,0,0,0.2);
+}
+.buy-btn:hover{
+	color:#FFFFFF;
+	background-color: #f15fa3;
+	transition: all ease 0.3s;
+}
+.overlay{
+	visibility: hidden;
+}
+.slide-img:hover .overlay{
+	visibility: visible;
+	animation:fade 0.5s;
+}
+ 
+@keyframes fade{
+	0%{
+		opacity: 0;
+	}
+	100%{
+		opacity: 1;
+	}
+}
+.slider{
+	width:100%;
+	height: 100vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.horizontal{
+    display:flex;
+    flex-wrap: wrap;
+    justify-content: center;
+	align-items: center;
+}
+
+.kommentar{
+    margin-inline:1%;
+    background-color: #333333;
+    width: 20%;
+    height: 1300px;
+    padding: 3%;
+}
+
+h3{
+    font-size: 5.5em;
+    font-weight: normal;
+    color: #fff;
+}
+
+h4{
+    font-size: 4em;
+    font-weight: normal;
+}
+
+.text{
+    font-size: 3.5em;
+}
+
+#verifiziert{
+    text-align: right;
+    font-size: 3.5em;
+}
+
+.funktionen{
+    margin-top: 10%;
+    margin-inline:2%;
+    width: 20%;
+}
+
+.linkContainer10{
+    margin-top: 10%;
+    display: flex;
+    justify-content: center;
+	align-items: center;
+}
+
+.linkContainer10  a{
+    text-decoration: none;
+    margin-inline: 5%;
+    color: #fff;
+}
+
+
+.socialMedia {
+    margin-top:-10%;
+    width: 5%;
+    height: 5%;
+    padding: 1%;
+    text-decoration: none;
+    color: #fff;
+    transition: background-color 0.3s ease;
+  }
+
+.linkContainer11{
+    display: flex;
+    justify-content: center;
+	align-items: center;
+}
+
+.linkContainer11  a{
+    text-decoration: none;
+    margin-inline: 5%;
+    color: #fff;
+}
+
+h5{
+    font-size: 4em;
+    font-weight: normal;
+}
+
+#copyright{
+    text-align: center;
+    font-size: 3em;
+}
+  
+ /* a:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+  }*/

@@ -5,29 +5,259 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Jaguar</title>
     <link rel="stylesheet" href="styles.css" />
+    <script src="script.js" defer=""></script>
 </head>
+
 <body>
+
     <div class="parent">
+
         <div class="childContainer1">
             <img src="Bilder/Bild1.jpg" alt="Sonnebrille Sun-Pace Classic" title="Bild"/>
             <img id="logo" src="Bilder/Logo.png" alt="Jaguar" title="Logo"/>
         </div>
+
         <div class="childContainer2">
             <h1>Jaguar Sun-Pace</h1>
             <p>"Wo der Schutz vor UV-Strahlen auf den Glamour der Mode trifft."</p>
         </div>
+        
         <div class="slidesContainer3">
-            <div class="sehstärke">
+            <div class="mySlides">
                 <img src="Bilder/sehstärke.png">
-              </div>
+            </div>
+            <div class="mySlides">
+                <img src="Bilder/persönlichkeit.png">
+            </div>
+            <div class="mySlides">
+                <img src="Bilder/qualität.png">
+            </div>
+            <div class="mySlides">
+                <img src="Bilder/kundenzufriedenheit.png">
+            </div>
+            <div style="text-align:center">
+                <span class="dot"></span>
+                <span class="dot"></span>
+                <span class="dot"></span>
+                <span class="dot"></span>
+            </div>
+        <!--<a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+        <a class="next" onclick="plusSlides(1)">&#10095;</a>-->
         </div>
+
         <div class="childContainer4">
+            <div class="seo">
+            <h2>Meine Kollektion</h2>
+            <p>
+                Mit einer raffinierten Mischung aus Funktionalität und Mode ist Jaguar Sun-Pace mehr als
+                nur ein Accessoire. es vereint Stil und Vielseitigkeit zu einer besonderen Kreation und
+                verleiht jedem einen individuellen Ausdruck. das zeitlose design passt zu jedem Look,
+                von lässig bis schick, und unterstreicht ihre Persönlichkeit auf elegante weise.
+            </p>
+            </div>
         </div>
-        <div class="childContainer5">
-        </div>
+
+        <section class="slider">
+            <ul id="autoWidth" class="cs-hidden">
+            
+            <li class="item-a">
+                <div class="box">
+
+                    <div class="slide-img">
+                        <img alt="1" src="Bilder/brille_schwarz.png">
+                        <div class="overlay">
+                        <a href="#" class="buy-btn">Buy Now</a>	
+                        </div>
+                    </div>
+
+                    <div class="detail-box">
+                        <h3>JAGUAR SUN-PACE CLASSIC</h3>
+                        <p>95,00 €</p>
+                        <p>inkl. MwSt./ zzgl. Versandkosten</p>
+                    </div>
+                
+                </div>	
+            </li>
+
+            <li class="item-b">
+                <div class="box">
+
+                    <div class="slide-img">
+                        <img alt="1" src="Bilder/brille_pink.png">
+                        <div class="overlay">
+                        <a href="#" class="buy-btn">Buy Now</a>	
+                        </div>
+                    </div>
+
+                    <div class="detail-box">
+                        <h3>JAGUAR SUN-PACE MOODC</h3>
+                        <p>98,00 €</p>
+                        <p>inkl. MwSt./ zzgl. Versandkosten</p>
+                    </div>
+                
+                </div>	
+            </li>
+
+            <li class="item-c">
+                <div class="box">
+
+                    <div class="slide-img">
+                        <img alt="1" src="Bilder/brille_blau.png">
+                        <div class="overlay">
+                        <a href="#" class="buy-btn">Buy Now</a>	
+                        </div>
+                    </div>
+
+                    <div class="detail-box">
+                        <h3>JAGUAR SUN-PACE MOODC</h3>
+                        <p>98,00 €</p>
+                        <p>inkl. MwSt./ zzgl. Versandkosten</p>
+                    </div>
+                
+                </div>	
+            </li>
+
+            <li class="item-d">
+                <div class="box">
+
+                    <div class="slide-img">
+                        <img alt="1" src="Bilder/brille_schwarz.png">
+                        <div class="overlay">
+                        <a href="#" class="buy-btn">Buy Now</a>	
+                        </div>
+                    </div>
+
+                    <div class="detail-box">
+                        <h3>JAGUAR SUN-PACE MOODC</h3>
+                        <p>98,00 €</p>
+                        <p>inkl. MwSt./ zzgl. Versandkosten</p>
+                    </div>
+                
+                </div>	
+            </li>
+          
+            </ul>
+        </section>
+     
+
         <div class="childContainer6"></div>
-        <div class="childContainer7"></div>
-    </div>
+
+        <div class="childContainer7">
+            <div class="seo">
+                <h2>Was sagen unsere Kunden?</h2>
+                <p> 98 Bewertungen in den letzten 6 Monate </p>
+                </div>
+
+            <div class="horizontal">
+
+                <div class="kommentar">
+                <div class="überschrift">
+                <h3>MELINA SCHMIDT</h3>
+                <h4>SUN-PACE MOOD</h4>
+                </div>
+                <p class="text">
+                    „Stilvoll und bequem - meine neue Lieblingsbrille“
+                    <br> <br>
+                    Ich bin absolut begeistert von meiner Sonnenbrille. Der Stil ist modern und schick, und die Passform ist 
+                    einfach perfekt. Die Qualität der Gläser ist hervorragend, und sie bieten problemlos eine klare Sicht.
+                
+                    <br> <br> <br>
+                    <p id="verifiziert">verifiziert</p>
+                </div>
+
+                <div class="kommentar">
+                    <h3>JOHN DOE</h3>
+                    <h4>SUN-PACE MOOD</h4>
     
+                    <p class="text">
+                        „Robust und langlebig - Qualität, die sich auszahlt!"
+                        <br> <br>
+                        Ich habe die Jaguar SUN- PACE jetzt seit über einem Jahr, und sie hat mich wirklich überzeugt. Die Konstruktion ist äußerst robust und die Gläser sind 
+                        kratzfest. Ich schätze die widerstandsfähige Verarbeitung, besonders da ich die Sonnenbrille täglich trage. 
+                    
+                        <p id="verifiziert">verifiziert</p>
+                    </div>
+
+                <div class="kommentar">
+                    <h3>LARA MEISER</h3>
+                    <h4>SUN-PACE CLASSIC</h4>
+        
+                    <p class="text">
+                        „Trendsetter in Sachen Brillenmode!"
+                        <br> <br>
+                        Die Qualität der Gläser ist ausgezeichnet, und mir gefällt die Vielfalt der Optionen. Das Design ist zeitlos und passt zu jedem Outfit. Ich habe 
+                        bereits viele Komplimente für meine Brille erhalten und empfehle Jaguar gerne weiter. Es ist definitiv eine Investition wert!
+                        <br> <br> <br> 
+                    <p id="verifiziert">verifiziert</p>
+                </div>
+            </div>
+
+            <div class="childContainer8"></div>
+
+            <footer>
+
+            <div class="childContainer9">
+                
+                <div class="horizontal">
+
+                    <div class="funktionen">
+                    <a href="index.html"><h3>BERATUNG</h3></a> 
+                    <p class="text">
+                        Sind Sie noch unschlüssig, welche Sonnenbrille es werden soll? 
+                        Gerne nehmen Sie mit uns Kontakt auf, um eine exklusive fachliche Beratung zu erhalten. 
+                    </div>
+
+                    <div class="funktionen">
+                        <a href="index.html"><h3>EXPERIENCE TOUR</h3></a> 
+                        <p class="text">
+                            Lehnen Sie sich zurück und lassen Sie sich von uns stilvoll inspirieren. Wir führen Sie 
+                            durch eine wohlfühlende und einzigartige Experience. 
+                        </p>
+                    </div>
+
+                    <div class="funktionen">
+                        <a href="index.html"><h3>NEWSLETTER</h3></a> 
+                        <p class="text">
+                            Einfach mehr erfahren! Die neuesten Impulse und Fortschritte rund um unsere Brillenwelt 
+                            Jaguar finden Sie in unserem digitalen Newsletter.
+                        </p>
+                    </div>
+
+                    <div class="funktionen">
+                        <a href="index.html"><h3>REPARATUR</h3></a> 
+                        <p class="text">
+                            Ist etwas kaputtgegangen oder Defekt? Wir haben ein Serviceteam die Ihre Sonnenbrille in 
+                            Handumdrehen repariert.
+                        </p>
+                    </div>
+            </div>
+        </div>
+            <div class="linkContainer10">
+                <a href="index.html"><h3>ÜBER JAGUAR</h3></a> 
+                <a href="index.html"><h3>KONTAKT</h3></a> 
+                <a href="index.html"><h3>PRESSE</h3></a> 
+                <a href="index.html"><h3>FAQ</h3></a> 
+            </div>
+
+            <div class="linkContainer10">
+                <a href="#" class="socialMedia"><img src="Bilder/icon_instagram.png"></a>
+                <a href="#" class="socialMedia"><img src="Bilder/icon_twitter.png"></a>
+                <a href="#" class="socialMedia"><img src="Bilder/icon_youtube.png"></a> 
+            </div>
+
+            <div class="linkContainer11">
+                <a href="index.html"><h5>AGB</h5></a> 
+                <a href="index.html"><h5>DATENSCHUTZ</h5></a> 
+                <a href="index.html"><h5>NUTZERBEDINGUNG</h5></a> 
+                <a href="index.html"><h5>COOKIES</h5></a> 
+
+            </div>
+
+
+           <p id="copyright">Copyright © 2010-2023 Jaguar Company S.L. Alle Rechte vorbehalten.</p>
+
+
+            </div>
+            </footer>
 </body>
 </html>
