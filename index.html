@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Jaguar</title>
-    <link rel="stylesheet" href="styles.css" />
+    <title>Jaguar SUN PACE</title>
+    <link rel="stylesheet" href="styles.css"/>
     <script src="script.js" defer=""></script>
 </head>
 
@@ -12,38 +12,35 @@
 
     <div class="parent">
 
-        <div class="childContainer1">
-            <img src="Bilder/Bild1.jpg" alt="Sonnebrille Sun-Pace Classic" title="Bild"/>
-            <img id="logo" src="Bilder/Logo.png" alt="Jaguar" title="Logo"/>
+       <div class="first_container">
+        <a href="index.html"><img src="Bilder/Logo.png" alt="Beispielbild"></a>
+        <img src="Bilder/bild1_V2.jpg" alt="Beispielbild">
+        
         </div>
 
-        <div class="childContainer2">
-            <h1>Jaguar Sun-Pace</h1>
+        <div class="second_container">
+            <h1>JAGUAR SUN PACE</h1>
             <p>"Wo der Schutz vor UV-Strahlen auf den Glamour der Mode trifft."</p>
         </div>
-        
-        <div class="slidesContainer3">
-            <div class="mySlides">
-                <img src="Bilder/sehstärke.png">
+
+        <div id="abstand"></div>
+
+        <section class="slide_container">
+            <div class="slider-wrapper">
+                <div class="slider">
+                    <img id="slide-1" src="Bilder/sehstärke.png"/>
+                    <img id="slide-2" src="Bilder/persönlichkeit.png" />
+                    <img id="slide-3" src="Bilder/qualität.png" />
+                    <img id="slide-4" src="Bilder/kundenzufriedenheit.png" />
+                </div>
+                <div class="slider-nav">
+                    <a href="#slide-1"></a>
+                    <a href="#slide-2"></a>
+                    <a href="#slide-3"></a>
+                    <a href="#slide-4"></a>
+                </div>
             </div>
-            <div class="mySlides">
-                <img src="Bilder/persönlichkeit.png">
-            </div>
-            <div class="mySlides">
-                <img src="Bilder/qualität.png">
-            </div>
-            <div class="mySlides">
-                <img src="Bilder/kundenzufriedenheit.png">
-            </div>
-            <div style="text-align:center">
-                <span class="dot"></span>
-                <span class="dot"></span>
-                <span class="dot"></span>
-                <span class="dot"></span>
-            </div>
-        <!--<a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-        <a class="next" onclick="plusSlides(1)">&#10095;</a>-->
-        </div>
+        </section>
 
         <div class="childContainer4">
             <div class="seo">
@@ -57,88 +54,49 @@
             </div>
         </div>
 
-        <section class="slider">
-            <ul id="autoWidth" class="cs-hidden">
-            
-            <li class="item-a">
-                <div class="box">
+        <div class="product_container">
 
-                    <div class="slide-img">
-                        <img alt="1" src="Bilder/brille_schwarz.png">
-                        <div class="overlay">
-                        <a href="#" class="buy-btn">Buy Now</a>	
-                        </div>
-                    </div>
+            <div class="item">
+                <div class="product_img"><img src="Bilder/brille_schwarz.png" style="width: 25%;"><div>
+                <p>JAGUAR SUN-PACE CLASSIC</p>
+                <p>95,00 €</p>
+                <p style="font-size: 3em;">inkl. MwSt./ zzgl. Versandkosten</p>
+                <button type="button">BUY NOW</button> 
+            </div>
+            </div>
+            <div class="item">
+                <div class="product_img"><img src="Bilder/brille_pink.png" style="width: 25%;"><div>
+                <p>JAGUAR SUN-PACE MOOD</p>
+                <p>98,00 €</p>
+                <p style="font-size: 3em;">inkl. MwSt./ zzgl. Versandkosten</p>
+                <button type="button">BUY NOW</button> 
+            <div class="item">
+                <div class="product_img"><img src="Bilder/brille_blau.png"  style="width: 25%;">
+                <p>JAGUAR SUN-PACE TECH</p>
+                <p>98,00 €</p>
+                <p style="font-size: 3em;">inkl. MwSt./ zzgl. Versandkosten</p>
+                <button type="button">BUY NOW</button> 
+            </div>
+        </div>
 
-                    <div class="detail-box">
-                        <h3>JAGUAR SUN-PACE CLASSIC</h3>
-                        <p>95,00 €</p>
-                        <p>inkl. MwSt./ zzgl. Versandkosten</p>
-                    </div>
-                
-                </div>	
-            </li>
 
-            <li class="item-b">
-                <div class="box">
-
-                    <div class="slide-img">
-                        <img alt="1" src="Bilder/brille_pink.png">
-                        <div class="overlay">
-                        <a href="#" class="buy-btn">Buy Now</a>	
-                        </div>
-                    </div>
-
-                    <div class="detail-box">
-                        <h3>JAGUAR SUN-PACE MOODC</h3>
-                        <p>98,00 €</p>
-                        <p>inkl. MwSt./ zzgl. Versandkosten</p>
-                    </div>
-                
-                </div>	
-            </li>
-
-            <li class="item-c">
-                <div class="box">
-
-                    <div class="slide-img">
-                        <img alt="1" src="Bilder/brille_blau.png">
-                        <div class="overlay">
-                        <a href="#" class="buy-btn">Buy Now</a>	
-                        </div>
-                    </div>
-
-                    <div class="detail-box">
-                        <h3>JAGUAR SUN-PACE MOODC</h3>
-                        <p>98,00 €</p>
-                        <p>inkl. MwSt./ zzgl. Versandkosten</p>
-                    </div>
-                
-                </div>	
-            </li>
-
-            <li class="item-d">
-                <div class="box">
-
-                    <div class="slide-img">
-                        <img alt="1" src="Bilder/brille_schwarz.png">
-                        <div class="overlay">
-                        <a href="#" class="buy-btn">Buy Now</a>	
-                        </div>
-                    </div>
-
-                    <div class="detail-box">
-                        <h3>JAGUAR SUN-PACE MOODC</h3>
-                        <p>98,00 €</p>
-                        <p>inkl. MwSt./ zzgl. Versandkosten</p>
-                    </div>
-                
-                </div>	
-            </li>
-          
-            </ul>
-        </section>
-     
+        <div class="gallery">
+            <div class="scroll-wrapper">
+              <div class="images">
+                <img src="Bilder/bild1.png" alt="Bild 1">
+                <img src="Bilder/bild2.png" alt="Bild 2">
+                <img src="Bilder/bild3.png" alt="Bild 3">
+                <img src="Bilder/bild4.png" alt="Bild 4">
+                <img src="Bilder/bild5.png" alt="Bild 5">
+                <img src="Bilder/bild6.png" alt="Bild 6">
+                <!-- Füge weitere Bilder nach Bedarf hinzu -->
+              </div>
+            </div>
+        </div>
+        
+        
+        <!--<a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+        <a class="next" onclick="plusSlides(1)">&#10095;</a>-->
 
         <div class="childContainer6"></div>
 
@@ -188,27 +146,34 @@
                         Die Qualität der Gläser ist ausgezeichnet, und mir gefällt die Vielfalt der Optionen. Das Design ist zeitlos und passt zu jedem Outfit. Ich habe 
                         bereits viele Komplimente für meine Brille erhalten und empfehle Jaguar gerne weiter. Es ist definitiv eine Investition wert!
                         <br> <br> <br> 
-                    <p id="verifiziert">verifiziert</p>
+                        <p id="verifiziert">verifiziert</p>
                 </div>
             </div>
-
-            <div class="childContainer8"></div>
+            <div id="abstand"></div>
+            <div class="siegelContainer">
+                <img class="siegel" src="Bilder/ontrust-logo-shopsiegel.png">
+                <img class="siegel" src="Bilder/Komponente-6-–-1@2x.png">
+                <img class="siegel" src="Bilder/guetesiegel-in-snline-shops.png" style="width:9%;">
+                <img class="siegel" src="Bilder/Datenschutz_Siegel_Rund-300x300.png">
+            </div>
 
             <footer>
 
-            <div class="childContainer9">
+            <div class="linkContainer10">
                 
                 <div class="horizontal">
 
                     <div class="funktionen">
-                    <a href="index.html"><h3>BERATUNG</h3></a> 
+                    <img class="icon" src="Bilder/icon_beratung-100.png">
+                    <a href="index.html"style="text-decoration: none;"><h3>BERATUNG</h3></a> 
                     <p class="text">
                         Sind Sie noch unschlüssig, welche Sonnenbrille es werden soll? 
                         Gerne nehmen Sie mit uns Kontakt auf, um eine exklusive fachliche Beratung zu erhalten. 
                     </div>
 
                     <div class="funktionen">
-                        <a href="index.html"><h3>EXPERIENCE TOUR</h3></a> 
+                        <img class="icon" src="Bilder/icon_experience.png">
+                        <a href="index.html" style="text-decoration: none"><h3>EXPERIENCE TOUR</h3></a> 
                         <p class="text">
                             Lehnen Sie sich zurück und lassen Sie sich von uns stilvoll inspirieren. Wir führen Sie 
                             durch eine wohlfühlende und einzigartige Experience. 
@@ -216,7 +181,8 @@
                     </div>
 
                     <div class="funktionen">
-                        <a href="index.html"><h3>NEWSLETTER</h3></a> 
+                        <img class="icon" src="Bilder/icon_netwsletter.png">
+                        <a href="index.html" style="text-decoration: none;"><h3>NEWSLETTER</h3></a> 
                         <p class="text">
                             Einfach mehr erfahren! Die neuesten Impulse und Fortschritte rund um unsere Brillenwelt 
                             Jaguar finden Sie in unserem digitalen Newsletter.
@@ -224,7 +190,8 @@
                     </div>
 
                     <div class="funktionen">
-                        <a href="index.html"><h3>REPARATUR</h3></a> 
+                        <img class="icon" src="Bilder/icon_reperatur.png">
+                        <a href="index.html" style="text-decoration: none;"><h3>REPARATUR</h3></a> 
                         <p class="text">
                             Ist etwas kaputtgegangen oder Defekt? Wir haben ein Serviceteam die Ihre Sonnenbrille in 
                             Handumdrehen repariert.
@@ -232,32 +199,36 @@
                     </div>
             </div>
         </div>
+        <div id="abstand"></div>
+        <div id="abstand"></div>
             <div class="linkContainer10">
                 <a href="index.html"><h3>ÜBER JAGUAR</h3></a> 
                 <a href="index.html"><h3>KONTAKT</h3></a> 
                 <a href="index.html"><h3>PRESSE</h3></a> 
                 <a href="index.html"><h3>FAQ</h3></a> 
             </div>
-
-            <div class="linkContainer10">
-                <a href="#" class="socialMedia"><img src="Bilder/icon_instagram.png"></a>
-                <a href="#" class="socialMedia"><img src="Bilder/icon_twitter.png"></a>
-                <a href="#" class="socialMedia"><img src="Bilder/icon_youtube.png"></a> 
+        <div id="abstand"></div>
+            <div class="linkContainer10">                                                                   <!-- Icons, Soziale Medien-->
+                <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+                <a href="https://https://www.instagram.com/" class="fa fa-instagram"></a>
+                <a href="https://twitter.com/?lang=de" class="fa fa-twitter"></a>
+                <a href="https://github.com/" class="fa fa-github"></a>
             </div>
-
-            <div class="linkContainer11">
+        <div id="abstand"></div>
+            <div class="linkContainer10">
+                <a href="index.html"><img src="Bilder/Logo.png" alt="Beispielbild"></a>
                 <a href="index.html"><h5>AGB</h5></a> 
                 <a href="index.html"><h5>DATENSCHUTZ</h5></a> 
                 <a href="index.html"><h5>NUTZERBEDINGUNG</h5></a> 
                 <a href="index.html"><h5>COOKIES</h5></a> 
-
+                <a href="index.html"><h5>Support</h5></a> 
             </div>
-
-
+            <div id="abstand"></div>
            <p id="copyright">Copyright © 2010-2023 Jaguar Company S.L. Alle Rechte vorbehalten.</p>
 
 
             </div>
-            </footer>
-</body>
+    </footer>
+
+    </body>
 </html>
