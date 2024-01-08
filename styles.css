@@ -124,106 +124,6 @@ h2{
 	align-items: center;
 }
 
-.horizontal{
-    display:flex;
-    flex-wrap: wrap;
-    justify-content: center;
-	align-items: center;
-}
-
-.kommentar{
-    margin-inline:1%;
-    background-color: #333333;
-    width: 20%;
-    height: 1300px;
-    padding: 3%;
-}
-
-h3{
-    font-size: 5.5em;
-    font-weight: normal;
-    color: #fff;
-	margin:0;
-}
-
-h4{
-    font-size: 4em;
-    font-weight: normal;
-}
-
-.text{
-    font-size: 3.5em;
-}
-
-#häckchen,#verifiziert{
-    text-align: right;
-    font-size: 3.5em;
-}
-
-.funktionen{
-    margin-top: 10%;
-    margin-inline:2%;
-    width: 20%;
-}
-
-.linkContainer10{
-    display: flex;
-    justify-content: center;
-	align-items: center;
-}
-
-.linkContainer10  a{
-    text-decoration: none;
-    margin-inline: 2%;
-    color: #fff;
-}
-
-.fa.fa-instagram{  
-	margin-right: 2%;                                                             
-    font-size: 1000%;
-    color:white;
-    text-decoration: none;
-}
-
-.fa.fa-twitter{
-	margin-right: 3%;  
-	font-size: 1300%;
-    color:white;
-    text-decoration: none;
-}
-
-.fa.fa-github{
-	font-size: 1300%;
-    color:white;
-    text-decoration: none;
-}
-
-
-.linkContainer10 a:hover{                                             /* Pseudoklasse, Zustand von Icons werden hervorgehoben */
-    color: #4A332E;                                               
-}
-
-
-.linkContainer10  a h3:hover{                                             /* Pseudoklasse, Zustand von Icons werden hervorgehoben */
-    color: #4A332E;                                               
-}
-
-
-h5{
-    font-size: 2.5em;
-    font-weight: normal;
-	margin:0;
-}
-
-#copyright{
-    text-align: center;
-    font-size: 3em;
-}
-  
- /* a:hover {
-    background-color: rgba(255, 255, 255, 0.1);
-  }*/
-
 
 .gallery {
 	margin: auto;
@@ -245,19 +145,96 @@ h5{
 	margin-right: 10px; /* Abstand zwischen den Bildern */
   }
 
-  .siegel{
-	display: inline;
+
+  
+  .horizontal{
+    display:flex;
+    flex-wrap: wrap;
+    justify-content: center;
 	align-items: center;
+}
+
+.kommentar{
+    margin-inline:1%;
+    background-color: #333333;
+    width: 20%;
+    height: 1300px;
+    padding: 3%;
+    position: relative;
+}
+
+h3{
+    font-size: 7em;
+    font-weight: normal;
+	margin:0;
+}
+
+h4{
+    font-size: 4em;
+    font-weight: normal;
+}
+
+.text{
+    font-size: 3.5em;
+}
+
+.kommentar #verifiziert{
+    position: absolute;
+    bottom: 0;
+    right: 5%;
+    font-size: 3.5em;
+}
+
+
+  
+.siegelContainer{
+	text-align: center;
+}
+.siegel{
 	width: 6%;
 	margin-inline:0.5% ;
-  }
+}
 
-  .siegelContainer{
-	text-align: center;
-  }
 
-  .icon {
+
+.icon {
 	width: 15%;
-  }
-
-
+}
+.vorteile{
+    margin-inline:2%;
+    width: 20%;
+}
+.linkContainer{
+    display: flex;
+    justify-content: center;
+	align-items: center;
+}
+.linkContainer  a{
+    text-decoration: none;
+    margin-inline: 2%;
+    color: white;
+}
+.fa.fa-instagram{  
+	margin-right: 2%;                                                             
+    font-size: 1000%;
+    color:white;
+}
+.fa.fa-twitter{
+	margin-right: 3%;  
+	font-size: 1300%;
+    color:white;
+}
+.fa.fa-github{
+	font-size: 1300%;
+    color:white;
+}
+h5{
+    font-size: 2.5em;
+    font-weight: normal;
+}
+.linkContainer  a:hover{                                                /* Pseudoklasse, Zustand von Icons werden hervorgehoben */
+    color: #3a3a3a;                                               
+}
+.linkContainer  a h3:hover{                                             
+    color: #3a3a3a;                                               
+}
