@@ -267,6 +267,7 @@ button a{
 }
 .kommentar:hover {
     opacity: 1;
+    width: 30%;
 }
 h3{
     font-size: 7em;
@@ -280,6 +281,17 @@ h4{
 .text{
     font-size: 3.5em;
 }
+.kommentar img{
+    width: 40%;
+}
+.kommentar .hacken{
+    width: 5%;
+    position:absolute;
+    bottom: 3%;
+    right: 25%;
+}
+
+
 .kommentar #verifiziert{
     position: absolute;
     bottom: 0;
