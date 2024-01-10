@@ -8,7 +8,7 @@ body{
     align-items: center;
     justify-content: center;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    font-weight: normal;
+    font-weight: lighter;
 	overflow-x: hidden;
 }
 #abstand{
@@ -16,7 +16,8 @@ body{
     display: flex
 }
 p{
-    font-size: 2.5em;
+    font-size: 2.0em;
+    line-height: 150%;
 }
 
 
@@ -42,11 +43,11 @@ html{
     position: absolute;
     opacity: 0;
 }
+#section3 {
+    width: 50%;
+}
 #section3 a img{
-    position:relative;
-    right: 2%;
-    float: right;
-    width: 3%;
+    width: 100%;
 }
 
 
@@ -56,7 +57,7 @@ html{
 	align-items: center;
 }
 .first_container a img{
-    width: 40%;
+    width: 30%;
     margin-top: 3%;
 }
 .first_container a {
@@ -78,12 +79,10 @@ h1{
     margin-bottom: 2%;
     font-size: 8em;
     font-family: 'Tilt Warp';
-    opacity: 0.5;
-    transition: opacity 0.5s ease-out;
+    font-weight: normal;
 }
-h1:hover {
-    opacity: 1;
-    font-size: 9em;
+.satz{
+    font-size: 3em;
 }
 .second_container{
     display: flex;
@@ -94,7 +93,260 @@ h1:hover {
 
 
 
-.slider-wrapper {
+
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+.sliderContainer_desktop{
+    margin-left: 5%;
+    width: 120%;
+}
+.wrapper {
+	position: relative;
+    width: 1890px;
+    height: 781px;
+	overflow: hidden;
+	display: flex;
+	align-items: flex-end;
+	justify-content: center;
+	padding: 1rem;
+}
+
+input {
+	appearance: none;
+	z-index: 100;
+	width: 5rem;
+	height: 0.5rem;
+	background: white;
+	cursor: pointer;
+}
+input :hover{
+    opacity: 0.75;
+    background-color: #3a3a3a;
+}
+
+input:last-of-type {
+	margin: 0;
+}
+
+input:checked {
+	background: #3a3a3a;
+}
+
+input + * {
+	position: absolute;
+	display: block;
+	top: 0;
+	right: 0;
+	width: 100%;
+	height: 100%;
+	transform: translateX(100%);
+	transition: transform ease-in-out 400ms;
+	border-radius: 5px;
+	overflow: hidden;
+	background: black;
+}
+
+input + *[aria-label]:before {
+	content: attr(aria-label);
+	display: block;
+	position: absolute;
+	top: 8rem;
+	left: 1.5rem;
+	font-size: 1.5rem;
+	color: black;
+	z-index: 1;
+	padding: .5rem;
+	background-color: rgba(0,0,0,0.5);
+}
+
+input:checked + * {
+	transform: translateX(0);
+	z-index: 1;
+}
+
+/* 
+	just to be safe we hide every element that comes after
+	each slide and that's not an input of type radio
+*/
+input + * + *:not(input[type=radio]) {
+	display: none;
+}
+
+/* ARROWS */
+
+input:before {
+	display: none !important;
+	content: '';
+	position: absolute;
+	top: 50%;
+	left: 1rem;
+	width: 2rem;
+	height: 2rem;
+	background: orange;
+	border-radius: 50%;
+}
+
+input:after {
+	display: none !important;
+	content: '';
+	position: absolute;
+	top: calc(50% + 1rem);
+	left: 2rem;
+	width: .5rem;
+	height: .5rem;
+	border-bottom: 1px solid #262626;
+	border-left: 1px solid #262626;
+	transform: translate(-25%, -50%) rotate(45deg);
+}
+
+input:checked:before, input:checked:after {
+	display: none;
+}
+
+input:checked + * + input:before {
+	left: calc(100% - 3rem);
+}
+
+input:checked + * + input:after {
+	left: calc(100% - 2rem);
+	transform: translate(-75%, -50%) rotate(-135deg);
+}
+
+input:checked + * + input + * ~ input:before,input:checked + * + input + * ~ input:after{
+	display: none;
+}
+
+input:last-of-type:before {
+	background: green;
+}
+
+.sliderContainer_mobile{
+    display: none;
+}
+
+
+/*
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.slider-desktop{
+    width: 90%;
+    height: auto;
+    margin-left: 180px;
+    overflow: hidden;
+    -ms-overflow-style: none; /* Hide scrollbar IE and Edge 
+	scrollbar-width: none; /* Hide scrollbar Firefox 
+    scroll-snap-type: x mandatory;
+	scroll-behavior: smooth;
+}
+
+figure{
+    position: relative;
+    left: 0;
+    width: 400%; /* width dikali slide 
+    animation: 10s slide infinite;
+}
+
+.slide{
+    position: relative;
+    width: 25%; /* width dibagi slide 
+    float: left;
+}
+
+.slide h1{
+    position: absolute;
+    font-size: 3em;
+    width: 100%;
+    text-align: center;
+    margin-top: 50px;
+    color: white;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+.slide img{
+    width: 90%;
+    height: auto;
+}
+.slider-nav {
+	display: flex;
+	column-gap: 1rem;
+	position: relative;
+    margin-left: 20%;
+	transform: translateX(-50%);
+	z-index: 1;
+}
+.slider-nav a {
+	width: 6rem;
+	height: 0.5rem;
+	margin: -2%;
+	background-color: white;
+	opacity: 0.75;
+	transition: opacity ease 250ms;
+}
+.slider-nav a:hover {
+	opacity: 1;
+	background-color: #171717;
+}
+.slider::-webkit-scrollbar {
+	display: none;
+}
+
+@keyframes slide{
+    0%{
+        left:0;
+    }
+    10%{
+        left:0;
+    }
+    20%{
+        left:-100%;
+    }
+    30%{
+        left:-100%;
+    }
+    40%{
+        left:-200%;
+    }
+    50%{
+        left:-200%;
+    }
+    55%{
+        left:-300%;
+    }
+    65%{
+        left:-300%;
+    }
+    66%{
+        left:-200%;
+    }
+    74%{
+        left:-200%;
+    }
+    75%{
+        left:-100%;
+    }
+    85%{
+        left:-100%;
+    }
+    90%{
+        left:0;
+    }
+    1000%{
+        left:0;
+    }
+}
+
+.slider-mobile{
+    display: none;
+}*/
+
+/*.slider-wrapper {
 	position: relative;
 	width: 100%;
 	margin: 0 auto;
@@ -107,10 +359,10 @@ h1:hover {
 	scroll-behavior: smooth;
 	box-shadow: 0 1.5rem 3rem -0.75rem hsla(0, 0%, 0%, 0.25);
 	border-radius: 0.5rem;
-	-ms-overflow-style: none; /* Hide scrollbar IE and Edge */
-	scrollbar-width: none; /* Hide scrollbar Firefox */
+	-ms-overflow-style: none; /* Hide scrollbar IE and Edge 
+	scrollbar-width: none; /* Hide scrollbar Firefox 
 }
-/* Hide scrollbar for Chrome, Safari and Opera */
+/* Hide scrollbar for Chrome, Safari and Opera 
 .slider::-webkit-scrollbar {
 	display: none;
 }
@@ -129,9 +381,9 @@ h1:hover {
 	z-index: 1;
 }
 .slider-nav a {
-	width: 8rem;
-	height: 1rem;
-	margin: -1.4%;
+	width: 6rem;
+	height: 0.5rem;
+	margin: -2%;
 	background-color: white;
 	opacity: 0.75;
 	transition: opacity ease 250ms;
@@ -146,18 +398,20 @@ h1:hover {
 	display: flex;
 	justify-content: center;
 	align-items: center;
-}
-
+}*/
 
 
 h2{
     font-size: 4.5em;
     font-weight:normal;
+    font-size: 3em;
+    letter-spacing: 0.05em;
 }
 
 .seo{
     margin-left: 9%;
     margin-right: 9%;
+    margin-top: 10%;
 }
 
 
@@ -180,13 +434,9 @@ h2{
 .productImg img{
     width: 120%;
 }
-
-.productImg img:hover{
-    width: 130%;
-}
-
 .modell_preis{
     font-size: 2em;
+    letter-spacing: 0.05em;
 }
 .mwst{
     font-size: 1.5em;
@@ -202,26 +452,31 @@ button{
     transition: all 0.5s;
     cursor: pointer;
 }
-button a{
-    color: white;
-    text-decoration: none;
+.button span {
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    transition: 0.5s;
 }
-.button span::after {
+  
+.button span:after {
     content: '\00bb';
+    position: absolute;
     opacity: 0;
     top: 0;
     right: -20px;
     transition: 0.5s;
-} 
+}
+button a{
+    color: white;
+    text-decoration: none;
+}
 .button:hover span {
     padding-right: 25px;
 }
 .button:hover span:after {
     opacity: 1;
     right: 0;
-}
-.button:hover{
-    font-size: 2em;
 }
 
 
@@ -273,10 +528,12 @@ h3{
     font-size: 2.5em;
     font-weight: normal;
 	margin:0;
+    letter-spacing: 0.06em;
 }
 h4{
     font-size: 1.8em;
     font-weight: normal;
+    letter-spacing: 0.05em;
 }
 .text{
     font-size: 1.5em;
@@ -290,8 +547,6 @@ h4{
     bottom: 3%;
     right: 25%;
 }
-
-
 .kommentar #verifiziert{
     position: absolute;
     bottom: 0;
@@ -328,31 +583,39 @@ h4{
     margin-inline: 2%;
     color: white;
 }
-
 .linkContainer a img {
     width: 100%;
 }
-
-.linkContainer #logo{
-    width: 400px;
+.linkContainer #logo2{
+    width: 600px;
 }
-.fa.fa-instagram{  
-	margin-right: 2%;                                                             
-	font-size: 500%;
-    color:white;
+#footersocialmedia {
+    display: contents;
+    width: 300px;
+}
+.fa.fa-instagram{                                                               
+    font-size: 500%;
+    margin-left: 20%;
 }
 .fa.fa-twitter{
 	margin-right: 3%;  
-	font-size: 500%;
-    color:white;
+    font-size: 500%;
+    margin-left: 20%;
 }
 .fa.fa-github{
-	font-size: 500%;
-    color:white;
+    font-size: 500%;
+    margin-left: 20%;
+}
+#footersocialmedia a:hover{                                             /* Pseudoklasse, Zustand von Icons werden hervorgehoben */
+    color: #3a3a3a;                                               
 }
 h5{
     font-size: 1.5em;
     font-weight: normal;
+    letter-spacing: 0.1em;
+}
+.text:nth-child(4){
+    margin: 0;
 }
 .linkContainer  a:hover{                                                /* Pseudoklasse, Zustand von Icons werden hervorgehoben */
     color: #3a3a3a;                                               
@@ -360,3 +623,694 @@ h5{
 .linkContainer  a h3:hover{                                             
     color: #3a3a3a;                                               
 }
+.copyright{
+    font-size: 1.2em;
+    text-align: center;
+    margin-top: 50px;
+}
+
+
+@media only screen and (min-width: 428px) and (max-width: 757px){
+
+    .parent{
+        width: 100%;
+    }
+    #abstand {
+        height: 4vh;
+    }
+    #abstand:nth-child(10),#abstand:nth-child(11),#abstand:nth-child(18),#abstand:nth-child(20) {
+        height: 2vh
+    }
+    .horizontal:nth-child(4) {
+        height: 1300px;
+    }
+    .first_container a img {
+        width: 70%;
+    }
+    h1 {
+        font-size: 2.5em;
+    }
+    .satz {
+        font-size: 1.5em;
+        text-align: center;
+        margin-left: 10px;
+        margin-right: 10px;
+      }
+    .slider{
+        height: 500px;
+    }
+    h2{
+        font-size: 2em;
+        text-align: center;
+    }
+    p {
+        font-size: 1.2em;
+    }
+    .product{
+        width: 90%;
+        padding:50px;
+    }
+    .productImg img{
+        width: 100%;
+    }
+    .modell_preis {
+        font-size: 1.5em;
+    }
+    .modell_preis:nth-child(2) {
+         display: block;
+         margin-top: 20px;
+    }
+    .mwst {
+        font-size: 1em;
+    }
+    button{
+        width: 100%;
+        font-size: 1.5em;
+    }
+    .images{
+        height: 300px;
+    }
+    .kommentar{
+        margin-bottom: 50px;
+        width: 350px;
+        height: auto;
+        padding: 3%;
+        position: relative;
+        opacity: 0.5;
+        transition: opacity 0.3s ease-in-out;
+    }
+    .kommentar:hover {
+        opacity: 1;
+        width: 350px;
+    }
+    .text {
+        font-size: 1.2em;
+    }
+    h3 {
+        font-size: 2em;
+    }
+    h4 {
+        font-size: 1em;
+    }
+    .kommentar #verifiziert {
+        font-size: 1em;
+    }
+    .siegel{
+        width: 20%;
+    }
+    .linkContainer{
+        width: 300px;
+        display: contents;
+    }
+    .vorteile{
+        width: 300px;
+        margin-left: 15%;
+        margin-right: 15%;
+        margin-bottom: 20%;
+    }
+    br{
+        display: none;
+    }
+    
+    .linkContainer a{
+        margin-bottom: 30px;
+        text-align: center;
+    }
+    .fa.fa-instagram, .fa.fa-twitter, .fa.fa-github{                                                               
+        font-size: 350%;
+    }
+    .linkContainer #logo2{
+        width: 80%;
+    }
+    h5{
+        font-size: 1.2em;
+        margin:0;
+    }
+    .copyright{
+        font-size: 1em;
+    }
+    #section3 a img {
+        width: 90%;
+    }
+
+    .sliderContainer_mobile{
+        display: contents;
+    }
+    .sliderContainer_desktop{
+        display: none;
+    }
+    input + * {
+        position: absolute;
+        display: block;
+        top: 0;
+        right: 0;
+        width: 100%;
+        height: 603px;
+    }
+    .wrapper {
+        position: relative;
+        width: 100%;
+        height: 603px;
+    }
+    input{
+        width: 2.5rem;
+        height: 0.3rem;
+    }
+    picture img{
+        width: 100%;
+    }
+
+}
+@media only screen and (min-width: 500px) and (max-width: 551px){
+
+    .sliderContainer_mobile{
+        display: contents;
+    }
+    .sliderContainer_desktop{
+        display: none;
+    }
+    input + * {
+        position: absolute;
+        display: block;
+        top: 0;
+        right: 0;
+        width: 100%;
+        height: 765px;
+    }
+    .wrapper {
+        position: relative;
+        width: 100%;
+        height: 765px;
+    }
+    input{
+        width: 2.5rem;
+        height: 0.3rem;
+    }
+    picture img{
+        width: 100%;
+    }
+}
+
+
+@media only screen and (min-width: 551px) and (max-width: 757px){
+
+    .vorteile{
+        width: 400px;
+    }
+    .product{
+        width: 90%;
+        margin-left: 8%;
+    }
+    .modell_preis {
+        font-size: 1.8em;
+    }
+    button{
+        width: 90%;
+    }
+    .productImg img{
+        width: 90%;
+    }
+    h3{
+        font-size: 2.5em;
+    }
+    .sliderContainer_mobile{
+        display: contents;
+    }
+    .sliderContainer_desktop{
+        display: none;
+    }
+    input + * {
+        position: absolute;
+        display: block;
+        top: 0;
+        right: 0;
+        width: 100%;
+        height: 1030px;
+    }
+    .wrapper {
+        position: relative;
+        width: 100%;
+        height: 1030px;
+    }
+    input{
+        width: 2.5rem;
+        height: 0.3rem;
+    }
+    picture img{
+        width: 100%;
+    }
+}
+
+@media only screen and (min-width: 743px) and (max-width: 914px){
+
+
+.sliderContainer_mobile{
+    display: none;
+}
+.sliderContainer_desktop{
+    display: contents;
+}
+input + * {
+    position: absolute;
+    display: block;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 350px;
+}
+.wrapper {
+    position: relative;
+    width: 100%;
+    height: 350px;
+}
+input{
+    width: 2.5rem;
+    height: 0.3rem;
+}
+picture img{
+    width: 100%;
+}
+}
+
+@media only screen and (min-width: 758px) and (max-width: 915px){
+
+    .parent{
+        width: 100%;
+    }
+    #abstand {
+        height: 4vh
+    }
+    #abstand:nth-child(10),#abstand:nth-child(11),#abstand:nth-child(18),#abstand:nth-child(20) {
+        height: 2vh
+    }
+    .first_container a img {
+        width: 70%;
+    }
+    h1 {
+        font-size: 4.5em;
+    }
+    .satz {
+        font-size: 1.5em;
+        text-align: center;
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+    .slider{
+        height: 500px;
+    }
+    h2{
+        font-size: 3em;
+        text-align: center;
+    }
+    p {
+        font-size: 1.3em;
+    }
+    .product{
+        width: 80%;
+        margin-left: 9%;  
+    }
+    .modell_preis {
+        font-size: 2.2em;
+    }
+    .modell_preis:nth-child(2) {
+        display: block;
+        margin-top: 20px;
+    }
+    .mwst {
+        font-size: 1em;
+    }
+    button{
+        width: 90%;
+        font-size: 1.5em;
+    }
+    .productImg img{
+        width: 90%;
+    }
+    h3{
+        font-size: 3em;
+    }
+
+    .images{
+        height: 300px;
+    }
+    .kommentar{
+        margin-bottom: 50px;
+        width: 70%;
+        height: auto;
+        padding: 3%;
+        position: relative;
+        opacity: 0.5;
+        transition: opacity 0.3s ease-in-out;
+    }
+    .kommentar:hover {
+        opacity: 1;
+        width: 70%;
+    }
+    .text {
+        font-size: 1.2em;
+    }
+    h4 {
+        font-size: 1em;
+    }
+    .kommentar #verifiziert {
+        font-size: 1em;
+    }
+    .siegel{
+        width: 18%;
+    }
+    .linkContainer{
+        width: 300px;
+        display: contents;
+    }
+    .vorteile{
+        width: 450px;
+        margin-left: 15%;
+        margin-right: 15%;
+        margin-bottom: 20%;
+    }
+    br{
+        display: none;
+    }
+    .linkContainer a{
+        margin-bottom: 50px;
+        text-align: center;
+    }
+    .fa.fa-instagram, .fa.fa-twitter, .fa.fa-github{                                                               
+        font-size: 350%;
+    }
+    h5{
+        font-size: 1.7em;
+        margin:0;
+    }
+    .galleryImg {
+        height: 500px;
+    }
+
+    /*.sliderContainer_desktop{
+        display: none;
+    }
+    .sliderContainer_mobile{
+        display: contents;
+    }
+    input + * {
+        position: absolute;
+        display: block;
+        top: 0;
+        right: 0;
+        width: 100%px;
+        height: 800px;
+    }
+    .wrapper {
+        position: relative;
+        width: 100%px;
+        height: 800px;
+        margin-left: 25%;
+    }
+    input{
+        width: 2.5rem;
+        height: 0.3rem;
+    }*/
+    .sliderContainer_mobile{
+        display: none;
+    }
+    .sliderContainer_desktop{
+        display: contents;
+    }
+    input + * {
+        position: absolute;
+        display: block;
+        top: 0;
+        right: 0;
+        width: 100%;
+        height: 340px;
+    }
+    .wrapper {
+        position: relative;
+        width: 100%;
+        height: 340px;
+    }
+    input{
+        width: 2.5rem;
+        height: 0.3rem;
+    }
+    picture img{
+        width: 100%;
+    }
+}
+@media only screen and (min-width: 914px) and (max-width: 1430px){
+
+
+    .parent{
+        width: 100%;
+    }
+    #abstand{
+        height: 4vh;
+        display: flex
+    }
+    .first_container a img{
+        width: 50%;
+    }
+    h1 {
+        font-size: 5em;
+        font-family: 'Tilt Warp';
+    }
+    .satz{
+        font-size: 1.5em;
+    }
+    h3 {
+        font-size: 2.5em;
+    }
+    h2 {
+        font-size: 3em;
+        text-align: center;
+    }
+    p {
+        font-size: 1.5em;
+    }
+    .images{
+        height: 500px;
+    }
+    .kommentarContainer .seo p{
+        text-align: center;
+    }
+    .text {
+        font-size: 1.2em;
+    }
+    .vorteile{
+        display: block;
+        width: 30%;
+        margin-top:50px;
+    }
+    .siegel{
+        width: 10%;
+    }
+    h5 {
+        font-size: 1em;
+    }
+    .kommentar{
+        margin-bottom: 50px;
+        width: 600px;
+        height: 400px;
+        padding: 3%;
+        position: relative;
+        opacity: 0.5;
+        transition: opacity 0.3s ease-in-out;
+    }
+    .kommentar #verifiziert{
+        font-size: 1.2em;
+    }
+    .kommentar:hover {
+        opacity: 1;
+        width: 600px;
+    }
+    #logo2{
+        position: absolute;
+        margin-top: 150px;
+        }
+    .linkContainer h3{
+        font-size: 2em;
+    }
+    .linkContainer:first-child{
+        display: contents;
+        align-items: flex-start;
+        width: 70%;
+    }
+    br{
+        display: none;
+    }
+    .fa.fa-instagram{                                                               
+        font-size: 350%;
+    }
+    .fa.fa-twitter{
+        margin-right: 3%;  
+        font-size: 350%;
+    }
+    .fa.fa-github{
+        font-size: 350%;
+    }
+    .kommentar .hacken{
+        left: 500px;
+    }
+    .product{
+        width: 300px;
+        margin-left: 80px;
+    }
+    .productContainer{
+        margin-left: -130px;
+    }
+    .modell_preis{
+        font-size: 1.5em;
+        width: 400px;
+    }
+    .modell_preis:last-child{
+        display: block;
+        margin-top: 50px;
+    }
+    .mwst {
+        font-size: 1em;
+    }
+    button{
+        font-size: 1.5em;
+    }
+    #section3 a img{
+        margin-top: 100px;
+    }
+    .sliderContainer_mobile{
+        display: none;
+    }
+    .sliderContainer_desktop{
+        display: contents;
+    }
+    input + * {
+        position: absolute;
+        display: block;
+        top: 0;
+        right: 0;
+        width: 100%;
+        height: 530px;
+    }
+    .wrapper {
+        position: relative;
+        width: 100%;
+        height: 530px;
+    }
+    input{
+        width: 2.5rem;
+        height: 0.3rem;
+    }
+    picture img{
+        width: 100%;
+    }
+    
+
+}
+
+
+@media only screen and (min-width: 1430px) and (max-width: 1801px){
+
+    #section1 img{
+        width: 80%;
+    }
+    h1{
+        font-size: 6em;
+        
+    }
+    .satz{
+        font-size: 1.8em;
+    }
+    h2 {
+        font-size: 3.5em;
+    }
+    p {
+        font-size: 1.5em;
+    }
+    .seoTextcontainer{
+        width: 1350px;
+    }
+   
+    .productContainer{
+        width: 1350px;
+        margin-left: 7%;
+    }
+    .modell_preis{
+        font-size: 1.5em;
+        width: 500px;
+    }
+    .mwst {
+        font-size: 1em;
+    }
+    button{
+        font-size: 1.3em;
+    }
+    .galleryContainer{
+        height: 600px;
+    }
+    .images{
+        height: 600px;
+    }
+    .kommentarContainer{
+        width: 1350px;
+        margin-left: 7%;
+    }
+    .kommentar{
+        height: 50%;
+    }
+    h3{
+        font-size: 2em;
+    }
+    h4{
+        font-size: 1.5em;
+    }
+    .text{
+        font-size: 1em;
+    }
+    .kommentar #verifiziert{
+        font-size: 1em;
+    }
+    .hacken{
+        margin-right: 3%;
+    }
+    .linkContainer:first-child{
+        width: 1350px;
+    }
+    br{
+        display: none;
+    }
+    .sliderContainer_mobile{
+        display: none;
+    }
+    .sliderContainer_desktop{
+        display: contents;
+    }
+    input + * {
+        position: absolute;
+        display: block;
+        top: 0;
+        right: 0;
+        width: 100%;
+        height: 530px;
+    }
+    .wrapper {
+        position: relative;
+        width: 100%;
+        height: 530px;
+    }
+    input{
+        width: 2.5rem;
+        height: 0.3rem;
+    }
+    picture img{
+        width: 100%;
+    }
+
+}
+
+@media only screen and (min-width: 1500px) and (max-width: 1900px){
+
+    #section1 img{
+        width: 90%;
+    }
+
+}
+
+
