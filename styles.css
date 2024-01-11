@@ -245,8 +245,11 @@ input:last-of-type:before{
 }
 
 /*Produktreihe*/
+.productContainer{
+    margin-right: 10%;
+}
 .product{
-    margin-inline:1%;
+    margin-inline:6%;
     width: 20%;
     height: auto;
     padding: 3%;
@@ -255,19 +258,21 @@ input:last-of-type:before{
     transition: opacity 0.3s ease-in-out;*/
 }
 .productImg img{
-    width: 120%;
+    width: 170%;
 }
 .modell_preis{
     font-size: 2em;
     letter-spacing: 0.05em;
+    width: 170%;
 }
 .mwst{
     font-size: 1.5em;
+    width: 170%;
 }
 
 /*Call to Action Button*/
 button{
-    width: 120%;
+    width: 170%;
     height: auto;
     font-size: 2em;
     padding: 4%;
@@ -411,7 +416,6 @@ button a{
 #footersocialmedia a:hover{                                            
     color: #3a3a3a;                                               
 }
-
 .text:nth-child(4){
     margin: 0;
 }
@@ -466,11 +470,11 @@ button a{
         font-size: 1.2em;
     }
     .product{
-        width: 90%;
-        padding:50px;
+        width: 140%;
+        margin-right:10%;
     }
     .productImg img{
-        width: 100%;
+        width: 120%;
     }
     .modell_preis{
         font-size: 1.5em;
@@ -483,7 +487,7 @@ button a{
         font-size: 1em;
     }
     button{
-        width: 100%;
+        width: 120%;
         font-size: 1.5em;
     }
     .images{
@@ -1006,11 +1010,17 @@ button a{
     }
     .productContainer{
         width: 1350px;
-        margin-left: 7%;
+        margin-left: 9%;
     }
     .modell_preis{
         font-size: 1.5em;
         width: 500px;
+    }
+    .modell_preis:nth-child(2){
+        font-size: 1.5em;
+        width: 500px;
+        display: block;
+        margin-top: 5%;
     }
     .mwst{
         font-size: 1em;
