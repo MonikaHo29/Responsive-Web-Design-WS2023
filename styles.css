@@ -527,9 +527,6 @@ button a{
         margin-right: 15%;
         margin-bottom: 20%;
     }
-    br{
-        display: none;
-    }
     .linkContainer a{
         margin-bottom: 30px;
         text-align: center;
@@ -788,9 +785,6 @@ button a{
         margin-right: 15%;
         margin-bottom: 20%;
     }
-    br{
-        display: none;
-    }
     .linkContainer a{
         margin-bottom: 50px;
         text-align: center;
@@ -923,9 +917,6 @@ button a{
         display: contents;
         align-items: flex-start;
         width: 70%;
-    }
-    br{
-        display: none;
     }
     .fa.fa-instagram{                                                               
         font-size: 350%;
