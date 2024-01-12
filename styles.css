@@ -981,7 +981,7 @@ button a{
 }
 
 /*mobile Ansicht Tablet*/
-@media only screen and (min-width: 1025px) and (max-width: 1429px){
+@media only screen and (min-width: 1025px) and (max-width: 1430px){
     .kommentar{
         height: 500px;
     }
