@@ -246,7 +246,6 @@ input:last-of-type:before{
 
 /*Produktreihe*/
 .productContainer{
-    margin-right: 10%;
     margin-left: 0;
 }
 .product{
@@ -337,7 +336,7 @@ button a{
     margin-inline:1%;
     background-color: #1a1919;
     margin-top: 50px;
-    width: 30%;
+    width: 26%;
     height: 700px;
     padding: 3%;
     position: relative;
@@ -346,7 +345,7 @@ button a{
 }
 .kommentar:hover{
     opacity: 1;
-    width: 35%;
+    width: 30%;
 }
 .kommentar img{
     width: 40%;
