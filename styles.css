@@ -1034,6 +1034,9 @@ button a{
     .kommentar{
         height: 50%;
     }
+    .kommentar:nth-child(3){
+        height: 60%;
+    }
     h3{
         font-size: 2em;
     }
@@ -1051,9 +1054,6 @@ button a{
     }
     .linkContainer:first-child{
         width: 1350px;
-    }
-    br{
-        display: none;
     }
     .sliderContainer_mobile{
         display: none;
