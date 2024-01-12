@@ -467,7 +467,7 @@ button a{
     }
     .product{
         width: 140%;
-        margin-right:10%;
+        margin-right:20%;
     }
     .productImg img{
         width: 120%;
@@ -500,7 +500,6 @@ button a{
     }
     .kommentar:hover{
         opacity: 1;
-        width: 350px;
     }
     .text{
         font-size: 1.2em;
@@ -761,7 +760,6 @@ button a{
     }
     .kommentar:hover{
         opacity: 1;
-        width: 70%;
     }
     .text{
         font-size: 1.2em;
@@ -904,7 +902,6 @@ button a{
     }
     .kommentar:hover{
         opacity: 1;
-        width: 600px;
     }
     #logo2{
         position: absolute;
@@ -987,7 +984,7 @@ button a{
 @media only screen and (min-width: 1430px) and (max-width: 1801px){
 
     #section1 img{
-        width: 80%;
+        width: 100%;
     }
     h1{
         font-size: 6em;
@@ -1006,7 +1003,7 @@ button a{
     }
     .productContainer{
         width: 1350px;
-        margin-left: 9%;
+        margin: 0;
     }
     .modell_preis{
         font-size: 1.5em;
