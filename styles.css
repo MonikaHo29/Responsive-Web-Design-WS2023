@@ -127,7 +127,7 @@ html{
 	box-sizing: border-box;
 }
 .sliderContainer_desktop{
-    margin-left: 5%;
+    margin-left: 0;
     width: 120%;
 }
 .wrapper{
@@ -247,6 +247,7 @@ input:last-of-type:before{
 /*Produktreihe*/
 .productContainer{
     margin-left: 0;
+    padding-right:10%;
 }
 .product{
     margin-inline:6%;
