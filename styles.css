@@ -846,7 +846,7 @@ button a{
         width: 100%;
     }
     #abstand{
-        height: 4vh;
+        height: 2vh;
         display: flex
     }
     .first_container a img{
@@ -882,6 +882,8 @@ button a{
         display: block;
         width: 30%;
         margin-top:50px;
+        margin-right: 0;
+        margin-left: 10%;
     }
     .siegel{
         width: 10%;
@@ -892,7 +894,7 @@ button a{
     .kommentar{
         margin-bottom: 50px;
         width: 600px;
-        height: 400px;
+        height: 450px;
         padding: 3%;
         position: relative;
         opacity: 0.5;
@@ -927,7 +929,7 @@ button a{
         font-size: 350%;
     }
     .kommentar .hacken{
-        left: 500px;
+        left: 450px;
     }
     .product{
         width: 300px;
@@ -935,6 +937,11 @@ button a{
     }
     .productContainer{
         margin-left: -130px;
+        padding-left: 8%;
+        padding-right: 115%;
+    }
+    .productImg img{
+        width: 100%;
     }
     .modell_preis{
         font-size: 1.5em;
