@@ -690,7 +690,7 @@ button a{
 }
 
 /*mobile Ansicht Tablet*/
-@media only screen and (min-width: 758px) and (max-width: 915px){
+@media only screen and (min-width: 758px) and (max-width: 1119px){
 
     .parent{
         width: 100%;
@@ -840,7 +840,7 @@ button a{
 }
 
 /*mobile Ansicht Tablet*/
-@media only screen and (min-width: 914px) and (max-width: 1430px){
+@media only screen and (min-width: 1200px) and (max-width: 1430px){
 
     .parent{
         width: 100%;
@@ -937,11 +937,11 @@ button a{
     }
     .productContainer{
         margin-left: -130px;
-        padding-left: 8%;
-        padding-right: 115%;
+        padding-left: 15%;
+        padding-right: 15%;
     }
     .productImg img{
-        width: 100%;
+        width: 150%;
     }
     .modell_preis{
         font-size: 1.5em;
@@ -956,6 +956,7 @@ button a{
     }
     button{
         font-size: 1.5em;
+        width: 150%;
     }
     #section3 a img{
         margin-top: 100px;
